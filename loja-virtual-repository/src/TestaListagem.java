@@ -11,7 +11,7 @@ public class TestaListagem {
 		Connection connection = criaConexao.recuperarConexao();
 		
 		Statement stm = connection.createStatement();
-		stm.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTOS");
+		stm.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
 		
 		ResultSet rst = stm.getResultSet();
 		
