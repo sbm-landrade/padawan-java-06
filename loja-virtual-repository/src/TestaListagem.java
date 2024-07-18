@@ -14,7 +14,6 @@ public class TestaListagem {
 		stm.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
 		
 		ResultSet rst = stm.getResultSet();
-		
 		while(rst.next()) {
 			Integer id = rst.getInt("ID");
 			System.out.println(id);
