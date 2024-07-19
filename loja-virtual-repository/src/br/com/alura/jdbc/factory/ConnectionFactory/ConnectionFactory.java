@@ -1,3 +1,4 @@
+package br.com.alura.jdbc.factory.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -15,6 +16,8 @@ public class ConnectionFactory {
 				.setJdbcUrl("jdbc:mysql://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC");
 		comboPooledDataSource.setUser("root");
 		comboPooledDataSource.setPassword("root");
+		
+		comboPooledDataSource.setMaxPoolSize(15);
 		
 		this.dataSource = comboPooledDataSource;
 	}
