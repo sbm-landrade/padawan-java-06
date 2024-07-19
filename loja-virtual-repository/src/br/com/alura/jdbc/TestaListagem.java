@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import br.com.alura.jdbc.factory.ConnectionFactory.ConnectionFactory;
+import br.com.alura.jdbc.factory.ConnectionFactory;
 
 public class TestaListagem {
 
