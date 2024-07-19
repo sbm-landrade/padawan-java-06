@@ -2,12 +2,13 @@ package br.com.alura.jdbc;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import br.com.alura.jdbc.dao.ProdutoDAO;
 import br.com.alura.jdbc.factory.ConnectionFactory;
 import br.com.alura.jdbc.modelo.Produto;
 
-public class TestaInsercaoComProduto {
+public class TestaInsercaoEListagemComProduto {
 
 	public static void main(String[] args) throws SQLException {
 
@@ -15,8 +16,10 @@ public class TestaInsercaoComProduto {
 
 		try (Connection connection = new ConnectionFactory().recuperarConexao()) {
 			ProdutoDAO produtoDao = new ProdutoDAO(connection);
-			produtoDao.salvarProduto(comoda);;
+			produtoDao.salvar(comoda);
 			//Lista = persistenciaProduto.listar();
+			List<Produto> listaDeProdutos = produtoDao.listar();
+			listaDeProdutos.stream().forEach(lp -> System.out.println(lp));
 		}
 	}
 }
