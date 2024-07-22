@@ -25,9 +25,13 @@ public class Categoria {
 	public void adicionar(Produto produto) {
 		produtos.add(produto);
 	}
-	
+
 	public List<Produto> getProdutos() {
 		return produtos;
 	}
 
+	@Override
+	public String toString() {
+		return this.nome;
+	}
 }
